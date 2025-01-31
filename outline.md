@@ -280,21 +280,20 @@ def update_driver(driver_id, new_name, valid_date):
 
 ---
 
-## **Day 3: ETL Pipelines**
+## **Day 3: ETL & Web Scraping Pipelines**
 
 ### **Core Concepts**
 
-1. **ETL (Extract, Transform, Load)**:
-   - **Extract**: Pull data from APIs, files, or databases.
-   - **Transform**: Clean, filter, or aggregate data.
-   - **Load**: Write to a destination (e.g., PostgreSQL, BigQuery).
-2. **Incremental Loading**:
-   - Process only new/updated data to save time/resources.
-3. **Web Scraping Considerations**:
-   - **Legal Compliance**: Check robots.txt and terms of service
-   - **Rate Limiting**: Add delays between requests
-   - **Dynamic Content**: Use headless browsers (Selenium) for JS-rendered sites
-   - **Data Cleaning**: Handle HTML inconsistencies and malformed data
+1. **Web Scraping Best Practices**:
+   - Legal compliance (robots.txt, terms of service)
+   - Rate limiting & request throttling
+   - Handling dynamic content with headless browsers
+   - Data cleaning & validation
+
+2. **ETL Patterns**:
+   - Incremental loading strategies
+   - Data quality checks
+   - Error handling & retry mechanisms
 
 ### **When to Use Web Scraping**
 - **Use When**: No API available, public data aggregation
@@ -594,22 +593,29 @@ etl_task >> validate_task >> alert_task
 
 ## **Day 7: Capstone Project**
 
-### **Guidelines**
+### **Enhanced Pipeline Architecture**
 
-1. **Pipeline Structure**:
-   - **Ingest**: Use scripts to pull data from APIs/CSVs.
-   - **Transform**: Clean with PySpark (notebooks for testing, scripts for production).
-   - **Store**: Raw data → PostgreSQL, processed data → BigQuery.
-   - **Orchestrate**: Schedule everything with Airflow.
-2. **Visualization**:
-   - **Qlik**: Build a business dashboard (connect to BigQuery).
-   - **Plotly**: Create exploratory reports (e.g., histograms, scatter plots).
+```mermaid
+graph LR
+A[Web Scraping] --> B{PostgreSQL}
+C[API/CSV] --> B
+B --> D[PySpark Processing]
+D --> E[[BigQuery]]
+E --> F[Qlik Dashboard]
+E --> G[Plotly Report]
+```
 
-### **Deliverables**
+### **Required Deliverables**
 
-1. **GitHub Repo**: Include notebooks, scripts, and documentation.
-2. **Qlik Dashboard**: Share a public link.
-3. **Plotly Report**: Export as HTML.
+1. **Web Scraping Components**:
+   - Legal compliance checklist
+   - Data quality reports
+   - Rate limiting implementation
+   
+2. **Pipeline Documentation**:
+   - Schema designs (ER diagrams)
+   - Airflow DAG definitions
+   - Data dictionary
 
 ---
 

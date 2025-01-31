@@ -2,38 +2,40 @@
 
 **Transform raw data into actionable insights** through a complete pipeline built with modern tools. Designed for analysts transitioning to engineering roles.
 
-![Data Pipeline Diagram](https://example.com/pipeline-diagram.png) _(Replace with actual diagram URL)_
-
 ## 🔑 Key Technologies
 
-| Tool           | Role in Project                          |
-| -------------- | ---------------------------------------- |
-| **PostgreSQL** | OLTP Database for transactional data     |
-| **PySpark**    | Distributed processing of large datasets |
-| **Airflow**    | Pipeline orchestration & scheduling      |
-| **Qlik**       | Business intelligence dashboards         |
-| **Plotly**     | Interactive data visualizations          |
-| **Docker**     | Containerized database environments      |
-| **BigQuery**   | Cloud data warehousing                   |
+| Tool              | Role in Project                          |
+| ----------------- | ---------------------------------------- |
+| **PostgreSQL**    | OLTP Database for transactional data     |
+| **PySpark**       | Distributed processing of large datasets |
+| **Airflow**       | Pipeline orchestration & scheduling      |
+| **BeautifulSoup** | HTML parsing for web scraping            |
+| **Selenium**      | Browser automation for JS-heavy sites    |
+| **Qlik**          | Business intelligence dashboards         |
+| **Plotly**        | Interactive data visualizations          |
+| **Docker**        | Containerized database environments      |
+| **BigQuery**      | Cloud data warehousing                   |
 
 ## 🎯 Learning Objectives
 
 By the end of this intensive, you'll be able to:
 
-✅ Design efficient database schemas (Star Schema, SCD)  
-✅ Build robust ETL pipelines with error handling  
-✅ Process big data using PySpark distributed computing  
-✅ Orchestrate workflows with Airflow DAGs  
-✅ Create production-ready dashboards in Qlik  
-✅ Develop interactive reports with Plotly
+✅ Build **ethical web scrapers** with rate limiting & JS handling  
+✅ Design **slowly changing dimensions** (SCD Type 2)  
+✅ Process big data using **PySpark** distributed computing  
+✅ Orchestrate workflows with **Airflow DAGs**  
+✅ Create production-ready **Qlik dashboards**  
+✅ Develop interactive **Plotly reports**  
+✅ Implement **cloud data pipelines** with BigQuery & GCS
 
 ## 📚 Tutorial Overview
 
 ### **Days 1-3: Core Foundations**
 
+- **Web Scraping**: HTML parsing, headless browsers, ethical practices
 - **Relational Databases**: OLTP vs OLAP, indexing, window functions
 - **Data Modeling**: Star schema, slowly changing dimensions (Type 1/2)
-- **ETL Development**: API ingestion, incremental loading, data validation
+- **ETL Development**: API/web scraping ingestion, data validation
 
 ### **Days 4-5: Scaling & Cloud**
 
@@ -63,25 +65,28 @@ By the end of this intensive, you'll be able to:
 | **Partitioning** | Splitting data by time/type for faster queries                 |
 | **Idempotency**  | Designing pipelines to handle reruns safely                    |
 | **Data Drift**   | Schema/statistical changes in production data                  |
+| **Web Scraping** | Extracting data from websites programmatically                 |
+| **SCD Type 2**   | Tracking historical dimension changes with validity dates      |
 
-**Visualization Terms:**
+**Web Scraping Specific:**
 
-- **Measure** → Quantitative metrics (e.g. fare amount)
-- **Dimension** → Categorical attributes (e.g. payment type)
-- **Calculated Field** → Derived metrics from raw data
-- **Heatmap** → Density visualization using color gradients
+- **robots.txt** → Website scraping permissions file
+- **Headless Browser** → Browser without GUI for automation
+- **Rate Limiting** → Polite scraping with request delays
+- **XPath/CSS** → HTML element targeting methods
 
 ## 🏆 Capstone Project
 
-**Build an end-to-end NYC Taxi Analytics Pipeline** (or use your own dataset):
+**Enhanced Pipeline with Web Data:**
 
 ```mermaid
 graph LR
-A[API/CSV] --> B{PostgreSQL}
-B --> C[PySpark Processing]
-C --> D[[BigQuery]]
-D --> E[Qlik Dashboard]
-D --> F[Plotly Report]
+A[Web Scraping] --> B{PostgreSQL}
+C[API/CSV] --> B
+B --> D[PySpark Processing]
+D --> E[[BigQuery]]
+E --> F[Qlik Dashboard]
+E --> G[Plotly Report]
 ```
 
 ## 🛠️ Prerequisites
@@ -89,6 +94,11 @@ D --> F[Plotly Report]
 - Basic Python & SQL knowledge
 - Docker Desktop installed ([guide](https://www.docker.com/products/docker-desktop/))
 - Python 3.8+ with virtual environments
+- **Web Scraping Requirements:**
+  - Chrome/Firefox browser installed
+  - Understanding of HTML/CSS basics
+  - Ethical scraping practices knowledge
+  - `pip install beautifulsoup4 selenium webdriver-manager`
 - (Optional) GCP/AWS account for cloud modules
 
 ## 🚦 Getting Started
@@ -128,4 +138,13 @@ wget -P data/raw https://example.com/nyc-taxi.csv  # Replace with actual dataset
    - Geospatial visualization of trips
    - Hourly demand heatmaps
 
+**New Deliverables:**
+
+- Web scraping legal compliance checklist
+- Scraped data quality reports
+- Headless browser configuration scripts
+- Rate limiting implementation examples
+
 ---
+
+**Ready to mine web data responsibly?** Start with [Day 3 ETL](outline.md#day-3-etl-pipelines)!
