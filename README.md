@@ -146,5 +146,3 @@ wget -P data/raw https://example.com/nyc-taxi.csv  # Replace with actual dataset
 - Rate limiting implementation examples
 
 ---
-
-**Ready to mine web data responsibly?** Start with [Day 3 ETL](outline.md#day-3-etl-pipelines)!
