@@ -1,0 +1,12 @@
+de_env/
+
+# python / jupyter
+*.pyc
+*.ipynb
+
+# airflow
+airflow.cfg
+
+
+data/taxi_data/*
+*.db
